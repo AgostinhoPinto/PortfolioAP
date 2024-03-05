@@ -447,3 +447,17 @@ h1 {
 .work img:hover {
     transform: scale(1.1);
 }
+
+.abc{
+    position: absolute;
+    text-align: center;
+    color: var(--text-color);
+}
+
+.imgbackground{
+    height: 500px;
+}
+
+.imguser{
+    border-radius: 5px;
+}
