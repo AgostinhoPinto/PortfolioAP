@@ -1,0 +1,449 @@
+/* ===== Google Font Import - Poppins ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.4s ease;;
+}
+
+/* ===== Colours ===== */
+:root{
+    --body-color: #cecece;
+    --nav-color: #ffffff;
+    --side-nav: #ffffff;
+    --text-color: #000000;
+    --footer-color:#000000;
+    --footer-row-color:#ffffff;
+    --button-color:#000000;
+    --button-color-hover:rgb(41, 92, 26);
+}
+
+body{
+    height: 100vh;
+    background-color: var(--body-color);
+}
+
+
+body.dark{
+    --body-color: #000000;
+    --nav-color: #000000;
+    --side-nav: #000000;
+    --text-color: #ffffff;
+    --footer-color:#cecece;
+    --footer-row-color:#000000;
+    --button-color:#ffffff;
+    --button-color-hover:#7a7a7a75;
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 70px;
+    width: 100%;
+    background-color: var(--nav-color);
+    z-index: 100;
+}
+
+body.dark nav{
+    border: 1px solid #393838;
+}
+
+nav .nav-bar{
+    position: relative;
+    height: 100%;
+    max-width: 1000px;
+    width: 100%;
+    background-color: var(--nav-color);
+    margin: 0 auto;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .nav-bar .sidebarOpen{
+    color: var(--text-color);
+    font-size: 25px;
+    padding: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+nav .nav-bar .logo a{
+    font-size: 25px;
+    font-weight: 500;
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.menu .logo-toggle{
+    display: none;
+}
+
+.nav-bar .nav-links{
+    display: flex;
+    align-items: center;
+}
+
+.nav-bar .nav-links li{
+    margin: 0 5px;
+    list-style: none;
+}
+
+.nav-links li a{
+    position: relative;
+    font-size: 17px;
+    font-weight: 400;
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 10px;
+}
+
+.nav-links li a::before{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    background-color: var(--text-color);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.nav-links li:hover a::before{
+    opacity: 1;
+}
+
+.nav-bar .darkLight-searchBox{
+    display: flex;
+    align-items: center;
+}
+
+.darkLight-searchBox .dark-light,
+.darkLight-searchBox .searchToggle{
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+}
+
+.dark-light i,
+.searchToggle i{
+    position: absolute;
+    color: var(--text-color);
+    font-size: 22px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dark-light i.sun{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.dark-light.active i.sun{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.dark-light.active i.moon{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.searchToggle i.cancel{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.searchToggle.active i.cancel{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.searchToggle.active i.search{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.searchBox{
+    position: relative;
+}
+
+@media (max-width: 790px) {
+    nav .nav-bar .sidebarOpen{
+        display: block;
+    }
+
+    .menu{
+        position: fixed;
+        height: 100%;
+        width: 320px;
+        left: -100%;
+        top: 0;
+        padding: 20px;
+        background-color: var(--side-nav);
+        z-index: 100;
+        transition: all 0.4s ease;
+    }
+
+    nav.active .menu{
+        left: -0%;
+    }
+
+    nav.active .nav-bar .navLogo a{
+        opacity: 0;
+        transition: all 0.3s ease;
+    }
+
+    .menu .logo-toggle{
+        display: block;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo-toggle .siderbarClose{
+        color: var(--text-color);
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .nav-bar .nav-links{
+        flex-direction: column;
+        padding-top: 30px;
+    }
+
+    .nav-links li a{
+        display: block;
+        margin-top: 20px;
+    }
+}
+
+/* Estilos para o footer */
+.footer{
+    background:var(--footer-color);
+    padding:10px 0px; /* Reduced padding */
+    font-family: 'Play', sans-serif;
+    text-align:center;
+}
+
+.footer .row{
+    width:100%;
+    margin:0.5% 0%; /* Reduced margin */
+    padding:0.3% 0%; /* Reduced padding */
+    color:var(--footer-row-color);
+    font-size:0.7em; /* Reduced font size */
+}
+    
+.footer .row a{
+    text-decoration:none;
+    color:var(--footer-row-color);
+    transition:0.5s;
+}
+    
+.footer .row a:hover{
+    color:var(--footer-row-color);
+}
+    
+.footer .row ul{
+    width:100%;
+}
+    
+.footer .row ul li{
+    display:inline-block;
+    margin:0px 30px;
+}
+    
+.footer .row a i{
+    font-size:2em;
+    margin:0% 1%;
+}
+
+/* Estilos para a classe .fixarRodape */
+.fixarRodape {
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    text-align: center;
+}
+
+.fixarnavbar{
+    bottom:top;
+    position: fixed;
+    width: 100%;
+}
+
+/* Button Styles */
+
+.buttonCV {
+    background-color:var(--button-color);
+    border: none;
+    color: var(--footer-row-color);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Animation Keyframes */
+@keyframes scale-up {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* Hover Animation */
+.buttonCV:hover {
+    background-color:var(--button-color-hover);
+}
+
+/* Active Animation */
+.buttonCV:active {
+    background-color: #7a7a7a75;
+    animation: scale-up 0.2s forwards;
+}
+
+/* Span Styles */
+.buttonCV span {
+    position: relative;
+    z-index: 1;
+}
+
+.icon {
+    display: inline-block;
+    vertical-align: middle;
+    width: 5%;
+    height: 5%;
+    margin-right: 1em;
+    margin-top: 1em;
+    stroke-width: 0;
+    fill: currentColor;
+  }
+
+  /* Custom Scrollbar */
+body::-webkit-scrollbar {
+    width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: var(--body-color);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--text-color);
+    border-radius: 6px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background-color: #888;
+}
+
+body::-webkit-scrollbar-corner {
+    background-color: var(--body-color);
+}
+
+.contact-form {
+    margin: 2rem auto;
+    width: 100%;
+    max-width: 500px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+}
+  
+    .contact-form input[type="text"],
+    .contact-form input[type="email"],
+    .contact-form textarea {
+    padding: 0.75rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.contact-form textarea {
+    height: 150px;
+}
+  .contact-form input[type="submit"] {
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+  
+  .contact-form input[type="submit"]:hover {
+    background-color: #444;
+}
+
+
+.divs {
+    width: 80%;
+    background-color: var(--body-color);
+    align-items: center;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--text-color);
+    padding-top: 85%; 
+    padding-bottom: 10%;
+}
+
+.box1 {
+    width: 60%;
+    display: block; /* Faz com que os elementos sejam exibidos em linha */
+}
+
+
+.paragrafoadireita{
+    text-align: right;
+    padding-left: 20%;
+}
+
+h1 {
+    text-align: left; /* Alinha "Quem sou eu?" à esquerda */
+}
+
+.work-list {
+    display: flex;
+    justify-content: right;
+    padding: 20px;
+}
+
+.work {
+    margin: 0 10px;
+}
+
+.work img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.work img:hover {
+    transform: scale(1.1);
+}

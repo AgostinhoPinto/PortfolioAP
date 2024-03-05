@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== CSS ===== -->
+    <link rel="stylesheet" href="css/style.css">
+        
+    <!-- ===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- ===== FONT AWESOME ===== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet"> 
+
+    <!-- ===== TITULO E ICON ===== -->
+    <title>Portfolio</title>
+    <link rel="shortcut icon" href="img/portfolio.png" type="image/x-icon">
+    
+</head>
+<body>
+	<header>
+		<!--Navbar-->
+		<nav class="fixarnabvar">
+			<div class="nav-bar">
+				<i class='bx bx-menu sidebarOpen' ></i>
+				<span class="logo navLogo"><a href="#">Portfolio</a></span>
+
+				<div class="menu">
+					<div class="logo-toggle">
+						<span class="logo"><a href="#">Portfolio</a></span>
+						<i class='bx bx-x siderbarClose'></i>
+					</div>
+
+					<ul class="nav-links">
+						<li><a href="#Home">Home</a></li>
+						<li><a href="#About">About me</a></li>
+						<li><a href="#Skills">Skills</a></li>
+						<li><a href="#Works">Works</a></li>
+						<li><a href="#Contact">Contact</a></li>
+					</ul>
+				</div>
+
+				<div class="darkLight-searchBox">
+					<div class="dark-light">
+						<i class='bx bx-moon moon'></i>
+						<i class='bx bx-sun sun'></i>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</header>
+
+
+        <div class="divs" id="Home" name="Home">
+
+            <!--About-->
+            <div class="box1" id="About" name="About">
+                <h1>About me</h1>
+            </div>
+            <div>
+                <p class="paragrafoadireita">
+                    <br>O meu nome é Agostinho Pinto e sou um jovem programador em início de carreira.
+                    <br>A minha jornada resulta de uma curiosidade infindável que me levou a encetar caminho pelas diversas linguagens e ferramentas de programação.
+                    <br>Entusiasta da colaboração, procuro sempre soluções inovadoras e eficientes. Estou entusiasmado com a perspetiva de um crescimento constante de tal modo que o meu futuro passe pela elaboração e implementação de projetos para o desenvolvimento de software.
+                    <br>
+                    <br>
+                    <h2><p class="paragrafoadireita">Acredito que em conjunto podemos criar inovação.</p></h2></p>
+					<br>
+                </p>
+					<button class="buttonCV" id="download-button">
+                    <span>Download CV</span>
+					</button>
+            </div>
+            <br><br><br>
+
+            <!--Skills-->
+    
+            <div class="box1" id="Skills" name="Skills">
+                <h1>Skills</h1>
+
+                <br>
+                <h4>Estas são as linguagens de programação que ja estudei e as quais me sinto avontade de trabalhar.</h4>
+            </div>
+            <div>
+                <p class="paragrafoadireita">
+                    <img src="img/c-sharp.png" class="icon" title="C#">
+                    <img src="img/c-.png" class="icon" title="C">
+                    <img src="img/sql-server.png" class="icon" title="SQL Server">
+                    <img src="img/mysql.png" class="icon" title="MySQL">
+                    <br>
+                    <img src="img/html.png" class="icon" title="HTML">
+                    <img src="img/css-3.png" class="icon" title="CSS">
+                    <img src="img/js.png" class="icon" title="JavaScript">
+                    <img src="img/folder.png" class="icon" title="PHP">
+                </p>
+            </div>
+            <br><br><br>
+
+            <!--My Works-->
+
+            <div id="Works" name="Works">
+                <div>
+                    <h1>My Works</h1>
+                    <p>Abaixo, você pode ver algumas dos meus projetos recentes. Clique em cada uma delas para saber mais detalhes.</p>
+                    <div class="work-list">
+                        <div class="work">
+                            <a href="page1.html">
+                                <img src="img/transferir.png" title="Project 1">
+                            </a>
+                        </div>
+                        <div class="work">
+                            <a href="page2.html">
+                                <img src="img/transferir.png" title="Project 2">
+                            </a>
+                        </div>
+                        <div class="work">
+                            <a href="page3.html">
+                                <img src="img/transferir.png" title="Project 3">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br><br><br>
+
+
+            <!--Contact-->
+    
+            <div class="box1" id="Contact" name="Contact">
+                <h1>Contact Form</h1>
+            </div>
+            <div class="contact-form">
+                <form action="php/submit_form.php" method="post">
+                    <input type="text" name="nome" placeholder="Nome" required>
+                    <input type="email" name="email" placeholder="E-mail" required>
+                    <textarea name="mensagem" placeholder="Mensagem" required></textarea>
+                    <input type="submit" value="Enviar">
+                </form>                
+            </div>
+            <br><br><br>
+            
+        </div>
+
+
+
+
+
+    <!--Footer-->
+
+        <footer class="fixarRodape">
+            <div class="footer">
+            <div class="row">
+            <a href="https://www.instagram.com/_.agostinho_/"><i class="fa fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/agostinho-pinto-a8ba90272/"><i class="fa fa-linkedin"></i></a>
+            <a href="https://github.com/AgostinhoPinto"><i class="fa fa-github"></i></a>
+            </div>
+            
+            <div class="row">
+            <ul>
+            <li><a href="#Home">Home</a></li>
+            <li><a href="#About">About me</a></li>
+            <li><a href="#Skills">Skills</a></li>
+            <li><a href="#Works">Works</a></li>
+            <li><a href="#Contact">Contact</a></li>
+            </ul>
+            </div>
+            
+            <div class="row">
+            Copyright © 2024 Agostinho Pinto - All rights reserved 
+            </div>
+            </div>
+        </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
